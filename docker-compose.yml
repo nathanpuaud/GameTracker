@@ -1,7 +1,7 @@
 services:
   db:
     image: mysql:8.0
-    container_name: gametracker_mysql
+    container_name: etl_mysql
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: etl_db
@@ -20,7 +20,7 @@ services:
 
   app:
     build: .
-    container_name: gametracker_app
+    container_name: etl_app
     volumes:
       - ./data:/app/data
       - ./output:/app/output
