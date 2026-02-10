@@ -12,4 +12,8 @@ mysql -h "$DB_HOST" -u "$DB_USER" -p"$DB_PASSWORD" --skip-ssl "$DB_NAME" < scrip
 
 #Lancement de Python
 echo "[AUTO] Lancement du traitement Python (ETL)..."
-python -m src.main
+python3 -m src.main
+
+echo "[AUTO] Création du rapport de synthèse..."
+python3 -m src.report
+

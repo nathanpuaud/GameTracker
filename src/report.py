@@ -142,3 +142,6 @@ def generate_report():
         f.write("\n".join(lines) + "\n")
 
     print(f"[REPORT] Rapport genere dans {OUTPUT_PATH}")
+
+if __name__ == "__main__":
+    generate_report()

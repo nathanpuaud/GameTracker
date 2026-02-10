@@ -35,6 +35,8 @@ services:
     depends_on:
       db:
         condition: service_healthy
+    # Création automatique du rapport de synthèse
+    entrypoint: bash -c "chmod +x scripts/run_pipeline.sh && ./scripts/run_pipeline.sh && tail -f /dev/null"
     stdin_open: true
     tty: true
 
