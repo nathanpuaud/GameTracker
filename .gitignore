@@ -1,7 +1,7 @@
 # Fichiers Python
-__pycache__ /
-*. pyc
+__pycache__/
+*.pyc
 # Environnement
-. env
+.env
 # Sorties
-output /
+output/
